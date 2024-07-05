@@ -10,7 +10,9 @@ You can see the architecture of the proposed SAM Adapter structure in the image 
 
 ![alt text](assets/sa.png)
 
-As proposed in the paper, I have implemented patch embedding tuning, high frequency component extraction using FFT & IFFT, and Layer-shared $\text{MLP}_{\text{up}}$. The dimensions of Patch Embedding tuning and Layer-unshared $\text{MLP}_{\text{tune}}$ were set arbitrarily and can be modified in ```run_sa.py```.
+As proposed in the paper, I have implemented patch embedding tuning, high frequency component extraction using FFT & IFFT, and Layer-shared $\text{MLP}_{\text{up}}$. 
+
+The dimensions of Patch Embedding tuning and Layer-unshared $\text{MLP}_{\text{tune}}$ were set arbitrarily and can be modified in ```run_sa.py```.
 
 Besides SAM Adapter, the code for training basic Segment Anything was written with reference to my [previous repository](https://github.com/Kyyle2114/Fine-tuning-Segment-Anything).
 
