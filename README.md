@@ -26,7 +26,7 @@ Since this repository was created for the need of segmentation on a single class
 
 The input prompt for the mask decoder is automatically generated. **By default, a rectangle(box) is created** using ```cv2.boundingRect``` that completely contains the binary mask region. If you want to use different types of prompts, you can modify ```code/segment_anything_sa/utils/trainer.py```.
 
-If you want to apply it to a multi-class dataset, modify ```code/segment_anything_sa/utils/trainer.py```. While I haven't implemented it myself, you can obtain multiple binary masks by one-hot encoding the GT mask y, and then obtain a box prompt for each mask.
+If you want to apply it to a multi-class dataset, modify ```code/segment_anything_sa/utils/trainer.py``` and ```code/segment_anything_sa/utils/dataset.py```. While I haven't implemented it myself, you can obtain multiple binary masks by one-hot encoding the GT mask y, and then obtain a box prompt for each mask.
 
 If the validation score improves, it saves the model weights. However, saving the entire set of weights is inefficient, so **it only saves the parameters being trained**. For more details, refer to ```code/segment_anything_sa/utils/save_weight.py```. After loading the model with an existing checkpoint, you can load a part of the weights using ```load_partial_weight```.
 
